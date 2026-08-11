@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پیام‌یار کسب‌وکار — پیام‌های حرفه‌ای برای مشتری‌هایتان</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+
+<header class="site-header">
+  <div class="brand">
+    <span class="brand-mark">پ</span>
+    <div class="brand-text">
+      <h1>پیام‌یار کسب‌وکار</h1>
+      <p>پیام حرفه‌ای برای مشتری، در چند ثانیه</p>
+    </div>
+  </div>
+  <div class="header-badge">بدون نیاز به هوش مصنوعی آنلاین</div>
+</header>
+
+<main class="layout">
+
+  <!-- FORM -->
+  <section class="panel form-panel" aria-labelledby="form-title">
+    <h2 id="form-title" class="panel-title">اطلاعات مشتری و کسب‌وکار</h2>
+
+    <form id="message-form">
+
+      <div class="field-group">
+        <label class="field-label">نوع کسب‌وکار</label>
+        <div class="business-grid" id="business-grid" role="radiogroup" aria-label="نوع کسب‌وکار">
+          <button type="button" class="biz-btn" data-value="gym" role="radio" aria-checked="false">
+            <svg viewBox="0 0 24 24" class="biz-icon"><path d="M4 9v6M2 10v4M20 9v6M22 10v4M7 12h10M6 7v10M18 7v10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+            <span>باشگاه</span>
+          </button>
+          <button type="button" class="biz-btn" data-value="salon" role="radio" aria-checked="false">
+            <svg viewBox="0 0 24 24" class="biz-icon"><path d="M6 6a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM6 13a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM8 8.5 19 5M8 15.5 19 19M8.5 11 13 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+            <span>آرایشگاه</span>
+          </button>
+          <button type="button" class="biz-btn" data-value="clinic" role="radio" aria-checked="false">
+            <svg viewBox="0 0 24 24" class="biz-icon"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+            <span>کلینیک</span>
+          </button>
+          <button type="button" class="biz-btn" data-value="realestate" role="radio" aria-checked="false">
+            <svg viewBox="0 0 24 24" class="biz-icon"><path d="M4 11 12 4l8 7M6 10v9h12v-9M10 19v-5h4v5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>
+            <span>مشاور املاک</span>
+          </button>
+          <button type="button" class="biz-btn" data-value="general" role="radio" aria-checked="false">
+            <svg viewBox="0 0 24 24" class="biz-icon"><path d="M4 8h16v11H4zM4 8l3-4h10l3 4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+            <span>عمومی</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field-group">
+          <label class="field-label" for="customer-name">نام مشتری</label>
+          <input type="text" id="customer-name" placeholder="مثلاً خانم احمدی" autocomplete="off">
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="service">خدمت / محصول</label>
+          <input type="text" id="service" placeholder="مثلاً جلسه مشاوره اول" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field-group">
+          <label class="field-label" for="price">قیمت (تومان)</label>
+          <input type="text" inputmode="numeric" id="price" placeholder="مثلاً ۴۵۰,۰۰۰">
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="tone">لحن پیام</label>
+          <select id="tone">
+            <option value="friendly">دوستانه</option>
+            <option value="formal">رسمی</option>
+            <option value="brief">مختصر</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="customer-message">پیام یا درخواست مشتری <span class="optional">(اختیاری)</span></label>
+        <textarea id="customer-message" rows="3" placeholder="مثلاً: سلام، هزینه‌ی خدمات‌تون چقدره و چه زمانی وقت خالی دارید؟"></textarea>
+      </div>
+
+      <button type="submit" class="generate-btn">
+        <span>ساخت سه پیام</span>
+        <svg viewBox="0 0 24 24" class="btn-icon"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="panel results-panel" aria-labelledby="results-title">
+    <h2 id="results-title" class="panel-title">پیش‌نمایش پیام‌ها</h2>
+
+    <div class="phone-frame" id="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-screen" id="phone-screen">
+        <div class="empty-state" id="empty-state">
+          <svg viewBox="0 0 24 24" class="empty-icon"><path d="M21 11.5a8.5 8.5 0 0 1-11.9 7.8L4 21l1.7-5.1A8.5 8.5 0 1 1 21 11.5z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p>اطلاعات را در فرم کنار وارد کنید تا پیام‌های آماده، اینجا مثل یک گفتگوی واقعی نمایش داده شود.</p>
+        </div>
+        <div class="messages-thread" id="messages-thread" hidden></div>
+      </div>
+    </div>
+
+    <div class="results-list" id="results-list" hidden></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>نسخه‌ی اول — پیام‌ها به‌صورت محلی و بدون اتصال به سرور ساخته می‌شوند.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
